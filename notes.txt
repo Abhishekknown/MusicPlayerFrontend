@@ -1,0 +1,4 @@
+https://backend-music-player-f1lk.onrender.com/api/songs/search/by-name?name=Solo
+
+
+Get all the songs here :https://backend-music-player-f1lk.onrender.com/ 

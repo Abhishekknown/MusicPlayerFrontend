@@ -13,6 +13,10 @@
         <div class="all-songs">
             <!-- things which should be here are  -->
              <!-- Filter and genre with drop down buttons -->
+              <div class="searchBox">
+                <input type="text" class="searchInput" placeholder="Search Music Here" />
+                <button class="searchBtn">Search</button>
+            </div>
               
 
              <!-- Add the filter first -->
@@ -20,10 +24,12 @@
                 <label for="genre">Choose a genre:</label>
                 <select id="genre">
                     <option value="">All</option>
-                    <option value="pop">Pop</option>
-                    <option value="rock">Rock</option>
-                    <option value="rock">Jazz</option>
-                    <option value="hiphop">Hip-hop</option>
+                    <option value="Alt Pop">Alt Pop</option>
+                    <option value="Lo-fi">Lo-fi</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Pop Rock">Pop Rock</option>
+                    <option value="Dance Pop">Dance Pop</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
                 </select>
               </div>
 
@@ -33,13 +39,8 @@
                </div>
 
                <!-- All songs to be displayed here -->
-                <div class="all-Songs">
-                    <div class="song-list">
-                        <span>song Name</span>
-                    </div>
-                     <div class="song-list">
-                        <span>song Name</span>
-                    </div>
+                <div class="all-Songs" id="allSongs">
+                    <!-- All list is appearing here -->
                 </div>
         </div>
 
@@ -48,16 +49,16 @@
         <div class="song-card">
             <!-- Main ablum Center -->
              <div class="coverAlbum">
-                <div class="musicCover"></div>
+                <div class="musicCover" id="musicCover"></div>
                 <div class="musicDetail">
                     <h2>SongTitle</h2>
                     <p>Singername</p>
                 </div>
             </div>
             <!-- Music COntrols -->
-             <audio src="" controls class="musicController">
-                <source src="your-audio-file.mp3" type="audio/mpeg">
-             </audio>
+             <audio id="mainAudio" controls class="musicController">
+                Your browser does not support the audio element.
+            </audio>
 
              <div class="musicButtons">
                 <div class="musicFlow">
@@ -73,37 +74,34 @@
 
         
         <div class="playlists">
-            <!-- Search Box At top -->
-            <div class="searchBox">
-                <input type="text" class="searchInput" placeholder="Search Music Here" />
-                <button class="searchBtn">Search</button>
-            </div>
+  <!-- Search Box At top -->
+ 
 
-            <!-- Customn Box -->
-            <div class="customBox">
-                <h3>Playlist Name</h3>
-                <div class="song-list">
-                        <span>song Name</span>
-                </div>
-                <div class="song-list">
-                        <span>song Name</span>
-                </div>
-            </div>
+  <!-- Custom Playlist Box -->
+  <div class="customBox">
+    <h3>Playlist Name</h3>
+    <div class="song-list">
+      <span>song Name</span>
+    </div>
+    <div class="song-list">
+      <span>song Name</span>
+    </div>
+  </div>
+
+  <!-- Playlist creation form -->
+  <div class="createPlaylist">
+    <input type="text" id="newPlaylistName" placeholder="New Playlist Name" />
+    <button id="createPlaylistBtn">Create Playlist</button>
+  </div>
+
+  <!-- Playlist results area (this was missing) -->
+  <div id="playlistList" class="playlist-Name"></div>
+</div>
 
 
-            <!--All Playlist Name-->
-            <div class="playlist-Name">
-                <div class="allPlaylist">
-                    <h3>Playlist Name</h3>
-                <div class="playlistName">
-                        <span>song Name</span>
-                </div>
-                <div class="song-list">
-                        <span>song Name</span>
-                </div>
-            </div>
-            </div>
+
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
